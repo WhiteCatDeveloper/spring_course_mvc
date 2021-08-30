@@ -2,6 +2,8 @@ package com.example.spring.mvc;
 
 
 
+import com.example.spring.mvc.validation.CheckEmail;
+
 import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -29,6 +31,8 @@ public class Employee {
     @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}",
             message = "please use pattern XXX-XX-XX")
     private String phoneNumber;
+    @CheckEmail (value = "abc.com", message = "email must ends with abc.com")
+    private String email;
 
 
 
@@ -126,6 +130,14 @@ public class Employee {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override

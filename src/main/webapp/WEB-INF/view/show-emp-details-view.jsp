@@ -30,8 +30,10 @@ Language(s):
 
     </c:forEach>
 </ul>
-
+<br>
 Phone number: ${employee.phoneNumber}
+<br>
+Email: ${employee.email}
 
 
 </body>
